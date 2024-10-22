@@ -1,0 +1,23 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "space h",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.debug.stepOver",
+    "when": "debugState == 'stopped'"
+},
+{
+    "key": "ctrl+e",
+    "command": "editor.debug.action.showDebugHover",
+    "when": "editorTextFocus && inDebugMode"
+},
+{
+    "key": "cmd+r cmd+i",
+    "command": "-editor.debug.action.showDebugHover",
+    "when": "editorTextFocus && inDebugMode"
+}
+]
