@@ -632,16 +632,6 @@
         "when": "canNavigateBack"
     },
     {
-        "key": "alt+]",
-        "command": "workbench.action.navigateForward",
-        "when": "canNavigateForward"
-    },
-    {
-        "key": "ctrl+shift+-",
-        "command": "-workbench.action.navigateForward",
-        "when": "canNavigateForward"
-    },
-    {
         "key": "alt+f4",
         "command": "editor.action.dirtydiff.next",
         "when": "editorTextFocus && !textCompareEditorActive"
@@ -931,15 +921,11 @@
         "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
-        "key": "shift+alt+l",
-        "command": "workbench.action.nextEditor"
-    },
-    {
         "key": "shift+cmd+]",
         "command": "-workbench.action.nextEditor"
     },
     {
-        "key": "shift+alt+h",
+        "key": "alt+[",
         "command": "workbench.action.previousEditor"
     },
     {
@@ -1277,5 +1263,13 @@
         "key": "cmd+k v",
         "command": "-markdown.showPreviewToSide",
         "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "key": "alt+]",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "cmd+m",
+        "command": "editor.action.addSelectionToNextFindMatch"
     }
 ]
