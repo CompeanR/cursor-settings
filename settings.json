@@ -12,6 +12,19 @@
     { "before": ["s"], "after": ["<leader>", "<leader>", "s"] },
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    // New ones 
+    { "before": ["<leader>", "j", "a"], "commands": ["workbench.action.joinAllGroups"] },
+    { "before": ["<leader>", "e", "u", "p"], "commands": ["workbench.action.unpinEditor"] },
+    { "before": ["<leader>", "d", "w"], "commands": ["editor.debug.action.selectionToWatch"] },
+    { "before": ["<leader>", "k", "s"], "commands": ["workbench.action.openGlobalKeybindings"] },
+
+    // Debug Views
+    { "before": ["<leader>", "d", "h", "w"], "commands": ["workbench.debug.watchExpressionsView.toggleVisibility"] },
+    { "before": ["<leader>", "d", "h", "c"], "commands": ["workbench.debug.callStackView.toggleVisibility"] },
+    { "before": ["<leader>", "d", "f", "w"], "commands": ["workbench.debug.action.focusWatchView"] },
+    { "before": ["<leader>", "d", "f", "c"], "commands": ["workbench.debug.action.focusCallStackView"] },
+
+
     // EasyMotion
     { "before": ["s"], "after": ["<leader>", "<leader>", "s"] },
 
@@ -25,21 +38,12 @@
     { "before": ["<C-h>"], "commands": ["workbench.action.focusPreviousGroup"] },
     { "before": ["<C-l>"], "commands": ["workbench.action.focusNextGroup"] },
     { "before": ["<C-w>"], "commands": ["workbench.action.closeActiveEditor"] },
-
-    // Random
-    { "before": ["<leader>", "j", "a"], "commands": ["workbench.action.joinAllGroups"] },
-    { "before": ["<leader>", "b", "e"], "commands": ["bookmarks.toggleLabeled"] },
-    { "before": ["<leader>", "e", "u", "p"], "commands": ["workbench.action.unpinEditor"] },
-    { "before": ["<leader>", "d", "w"], "commands": ["editor.debug.action.selectionToWatch"] },
-
-    // Terminal
-    { "before": ["<leader>", "t", "t"], "commands": ["workbench.action.terminal.toggleTerminal"] },
+  
 
     // Tab Navigation
     { "before": ["<C-[>"], "commands": ["workbench.action.previousEditor"] },
     { "before": ["<C-]>"], "commands": ["workbench.action.nextEditor"] },
 
-    // Projets
     // Projects
     { "before": ["<leader>", "p", "o"], "commands": ["projectManager.listProjects"] },
 
@@ -61,8 +65,6 @@
     { "before": ["<leader>", "d", "s", "l"], "commands": ["php-debug.startWithListen"] },
     { "before": ["<leader>", "d", "t"], "commands": ["extension.toggleBreakpointEnabled"] },
 
-    // Bookmarks
-    { "before": ["<C-S-b>"], "commands": ["bookmarks.toggle"] },
 
     // File Explorer
     { "before": ["<C-S-e>"], "commands": ["workbench.view.explorer"] },
@@ -152,12 +154,13 @@
     { "before": ["<leader>", "f", "r"], "commands": ["workbench.action.files.rename"] },
     { "before": ["<leader>", "f", "c"], "commands": ["workbench.action.files.newUntitledFile"] },
 
-    // Bookmarks Window
-    { "before": ["<leader>", "b", "a"], "commands": ["bookmarks.toggle"] },
-    { "before": ["<leader>", "b", "b"], "commands": ["bookmarks.listFromAllFiles"] },
-    { "before": ["<leader>", "b", "s"], "commands": ["bookmarks.list"] },
-    { "before": ["]", "b"], "commands": ["bookmarks.jumpToNext"] },
-    { "before": ["[", "b"], "commands": ["bookmarks.jumpToPrevious"] },
+    // Bookmarks Window - Quick Access
+    { "before": ["<leader>", "q", "q"], "commands": ["bookmarks.toggle"] },
+    { "before": ["<leader>", "q", "l"], "commands": ["bookmarks.listFromAllFiles"] },
+    { "before": ["<leader>", "q", "s"], "commands": ["bookmarks.list"] },
+    { "before": ["]", "q"], "commands": ["bookmarks.jumpToNext"] },
+    { "before": ["[", "q"], "commands": ["bookmarks.jumpToPrevious"] },
+    { "before": ["<leader>", "q", "e"], "commands": ["bookmarks.toggleLabeled"] },
 
     // Git Window
     { "before": ["<leader>", "g", "o"], "commands": ["workbench.view.scm"] },
